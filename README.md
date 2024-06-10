@@ -1,4 +1,4 @@
-# WORDPRESS Multisite + MySQL + PhpMyAdmin docker-compose demo CI/CD pipeline
+# WORDPRESS Multisites CI/CD pipeline
 
 <a href="https://dash.elest.io/deploy?source=cicd&social=dockerCompose&url=https://github.com/elestio-examples/wordpress-multisite"><img src="deploy-on-elestio.png" alt="Deploy on Elest.io" width="180px" /></a>
 
