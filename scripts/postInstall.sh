@@ -2,7 +2,7 @@
 set -o allexport; source .env; set +o allexport;
 
 echo "Waiting for WP to be ready ...";
-# sleep 180s;
+sleep 180s;
 
 cat << EOF > ./installWP-CLI.sh
 #install wp-cli
