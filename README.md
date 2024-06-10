@@ -22,6 +22,42 @@ You can connect to your DB through PHPMyAdmin:
     Login: root (set in reverse proxy configuration)
     Password: [ADMIN_PASSWORD] (set in reverse proxy configuration)
 
+# Multisite Setup Guide
+
+## Default Site Access
+
+Your initial website will be accessible at::
+
+    https://[CI_CD_DOMAIN]
+
+## Adding New Sites
+
+To add new sites, follow these steps:
+
+1. Log in with your credentials at: https://[CI_CD_DOMAIN]/wp-admin
+2. Navigate to the `My Sites` tab in the top left corner of your admin page.
+3. Hover over `My Sites`, then click on `Network Admin > Sites`.
+4. Click on `Add New Site` button.
+   5.Enter the subfolder domain, title, language, and admin email, then click on `Add Site`.
+5. By default, your new site will be accessible at: https://[CI_CD_DOMAIN]/your-second-site (if you entered "your-second-site" as the `Site Address`).
+
+## Custom domain
+
+To assign custom domains to your sites, follow these steps:
+
+1. Add your domain in Elestio dashboard as explained here:
+
+   https://docs.elest.io/books/security/page/custom-domain-and-automated-encryption-ssltls
+
+2. Log in with your credentials at: https://[CI_CD_DOMAIN]/wp-admin
+3. Navigate to the `My Sites` tab in the top left corner of your admin page.
+4. Hover over `My Sites`, then click on `Network Admin > Sites`.
+5. Click on `Edit` button under the site you want to update.
+6. Change `Site Address` with your custom domain.
+7. Click on `Save Changes` button.
+
+With these steps, you can easily manage multiple sites and customize their domains within your multisite network.
+
 # Redis
 
 You can activate the Redis cache by following the below steps:
