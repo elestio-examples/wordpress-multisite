@@ -38,7 +38,7 @@ services:
       WORDPRESS_DB_USER: ${MYSQL_USER}
       WORDPRESS_DB_PASSWORD: ${MYSQL_PASSWORD}
       WORDPRESS_DB_NAME: blog_wp
-      WORDPRESS_CONFIG_EXTRA: define('WP_ALLOW_MULTISITE', true )
+      WORDPRESS_CONFIG_EXTRA: define('WP_ALLOW_MULTISITE', true );
     volumes:
       - ./php.ini:/usr/local/etc/php/conf.d/custom.ini
       - ./wordpress:/var/www/html
