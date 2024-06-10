@@ -8,7 +8,7 @@ cat << EOF > ./installWP-CLI.sh
 #install wp-cli
 docker-compose exec -T wordpress bash -c "cd /tmp/ && curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar && chmod +x wp-cli.phar && mv wp-cli.phar /usr/local/bin/wp;"
 
-docker-compose exec -T wordpress bash -c "/usr/local/bin/wp core multisite-install --allow-root --title='Welcome to the WordPress' --admin_user='admin' --admin_password='${ADMIN_PASSWORD}' --admin_email='${ADMIN_EMAIL}' --url='${URL}'"
+docker-compose exec -T wordpress bash -c "/usr/local/bin/wp core multisite-install --allow-root --title='Welcome to the WordPress' --admin_user='admin' --admin_password='${ADMIN_PASSWORD}' --admin_email='${ADMIN_EMAIL}' --url='${SITE_HOST}'"
 
 docker-compose exec -T wordpress bash -c "wp plugin install wp-super-cache --activate --allow-root --path='/var/www/html'"
 docker-compose exec -T wordpress bash -c "wp plugin install wordpress-seo --activate --allow-root --path='/var/www/html'"
